@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Vidyaranya Memorial Trust{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
+    <!-- Add your other head elements and styles here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            background: #fcfcfc;
+            color: #1a237e;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background: #fff;
+            border-bottom: 2px solid #e3e3e3;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .navbar-brand,
+        .navbar .fw-bold {
+            color: #1565c0 !important;
+            font-size: 1.35rem;
+        }
+
+        .navbar-nav .nav-link,
+        .navbar-nav .dropdown-item {
+            color: #111 !important;
+            font-weight: 600;
+            font-size: 1.07rem;
+            border-radius: 5px;
+            letter-spacing: 0.03em;
+            margin: 0 2px;
+            transition: background 0.18s, color 0.18s;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active,
+        .navbar-nav .dropdown-item:hover,
+        .navbar-nav .dropdown-item:focus {
+            background-color: #f3f7fd;
+            color: #0d47a1 !important;
+        }
+
+        .container-main {
+            max-width: 1100px;
+            margin: 2.2rem auto 2.5rem auto;
+            padding: 2.2rem 2rem;
+            background: #fff;
+            border-radius: 1.1rem;
+            box-shadow: 0 3px 18px rgba(21, 101, 192, 0.07);
+        }
+
+        section {
+            margin-bottom: 2.7rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #1565c0;
+            font-weight: 800;
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            margin-bottom: 1.1rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.9rem;
+        }
+
+        p,
+        li {
+            color: #303040;
+            font-size: 1.06rem;
+        }
+
+        img.img-fluid {
+            box-shadow: 0 3px 18px rgba(2, 136, 209, 0.06);
+            border-radius: 1.1rem;
+        }
+
+        .form-control,
+        .btn {
+            border-radius: 0.9rem;
+        }
+
+        .btn.bg-teal,
+        .btn-primary {
+            background: #1976d2 !important;
+            color: #fff !important;
+            border: none;
+            font-weight: 600;
+        }
+
+        .btn.bg-teal:hover,
+        .btn-primary:hover {
+            background: #1565c0 !important;
+        }
+
+        body {
+            background: #f5f6fa;
+            color: #1a237e;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container-main {
+            max-width: 1100px;
+            margin: 2.5rem auto 2.5rem auto;
+            padding: 2.3rem 2rem;
+            background: #fff;
+            border-radius: 1.2rem;
+            box-shadow: 0 4px 32px rgba(44, 62, 80, 0.10), 0 1.5px 6px rgba(2, 136, 209, 0.07);
+            border: 1px solid #dde3ec;
+        }
+
+        @media (max-width: 991px) {
+            .container-main {
+                padding: 1rem 0.4rem;
+            }
+        }
+
+
+        footer {
+            margin-top: 2rem;
+            padding: 1rem 0 0.7rem;
+            text-align: center;
+            font-size: 1rem;
+            background: transparent;
+            color: #1976d2;
+        }
+
+        @media (max-width: 991px) {
+            .container-main {
+                padding: 1.2rem 0.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/trustlogo.png') }}" alt="VMT Logo" width="40"
+                    height="40" class="me-2 rounded" />
+                <span class="fw-bold text-teal">Vidyaranya Memorial Trust</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="#">About
+                            us</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url_for('home')}}#about">About VMT</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('home')}}#mission">Vision & Mission</a></li>
+                            <li><a class="dropdown-item" href="#">VMT Board of Directors</a></li>
+                            <li><a class="dropdown-item" href="#">Our Team</a></li>
+                            <li><a class="dropdown-item" href="#">Our Supporters</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="#">What we
+                            do</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url_for('health')}}">Health</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('education')}}">Education</a></li>
+                            <li><a class="dropdown-item" href="#">Employment & Training</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('woman')}}">Woman Welfare</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('personalitydevelopment')}}">Personality
+                                    Development</a></li>
+                            <li><a class="dropdown-item" href="#">Cultural Values</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="#">My
+                            story</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">VMT Staff</a></li>
+                            <li><a class="dropdown-item" href="#">Volunteers</a></li>
+                            <li><a class="dropdown-item" href="#">Children</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                            href="#">Publications</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Reports</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('press_releases') }}">Press Releases</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="#">Support
+                            VMT</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Donate</a></li>
+                            <li><a class="dropdown-item" href="#">Volunteer</a></li>
+                            <li><a class="dropdown-item" href="#">Be an admirer</a></li>
+                            <li><a class="dropdown-item" href="#">Membership</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}#contact">Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page content will be injected here -->
+    <div class="container-main">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+
+    <!-- Footer can also be included here -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        ScrollReveal().reveal('.sr-reveal', {
+            distance: '40px',
+            origin: 'bottom',
+            opacity: 0,
+            duration: 700,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            interval: 120,
+            reset: false  // set to true if animations should repeat when re-entered
+        });
+
+    </script>
+
+    <script>
+        // Disable right-click specifically on all images
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('img').forEach(function (img) {
+                img.addEventListener('contextmenu', function (e) {
+                    e.preventDefault();
+                });
+            });
+        });
+    </script>
+    <!-- Navbar Hover Functionality -->
+    <script>
+        // Enable Bootstrap dropdowns to show on hover for nav-bar
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdowns = document.querySelectorAll('.navbar .dropdown');
+
+            dropdowns.forEach(function (dropdown) {
+                dropdown.addEventListener('mouseenter', function () {
+                    const menu = this.querySelector('.dropdown-menu');
+                    if (menu) {
+                        menu.classList.add('show');
+                        // Also add the background color for active state
+                        this.querySelector('.nav-link').classList.add('active');
+                    }
+                });
+
+                dropdown.addEventListener('mouseleave', function () {
+                    const menu = this.querySelector('.dropdown-menu');
+                    if (menu) {
+                        menu.classList.remove('show');
+                        // Remove the active state background
+                        this.querySelector('.nav-link').classList.remove('active');
+                    }
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!e.target.closest('.navbar .dropdown')) {
+                    document.querySelectorAll('.navbar .dropdown-menu').forEach(function (menu) {
+                        menu.classList.remove('show');
+                    });
+                    document.querySelectorAll('.navbar .nav-link').forEach(function (link) {
+                        link.classList.remove('active');
+                    });
+                }
+            });
+
+            // Disable right-click on images
+            document.querySelectorAll('img').forEach(function (img) {
+                img.addEventListener('contextmenu', function (e) {
+                    e.preventDefault();
+                });
+            });
+        });
+    </script>
+    <script>
+        // Basic right-click protection
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // Disable common dev tools shortcuts
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'F12') {
+                e.preventDefault();
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                e.preventDefault();
+                return false;
+            }
+            if (e.ctrlKey && e.key === 'U') {
+                e.preventDefault();
+                return false;
+            }
+        });
+    </script>
+    <script>
+        // Disable right-click specifically on all images
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('img').forEach(function (img) {
+                img.addEventListener('contextmenu', function (e) {
+                    e.preventDefault();
+                });
+            });
+        });
+    </script>
+
+</body>
+<!-- Footer Section -->
+<footer class="footer mt-auto py-4 bg-light border-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="mb-0 text-muted">
+                    &copy; 2025 Vidyaranya Memorial Trust. Powered by
+                    <span class="fw-bold text-primary">FuturIQSolutions</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>

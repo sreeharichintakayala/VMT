@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block title %}Press Releases - Vidyaranya Memorial Trust{% endblock %}
+{% block content %}
+<style>
+    /* Scoped styles specific to press releases page */
+    body {
+        background: linear-gradient(135deg, #e0f7fa 0%, #fceded 100%);
+        min-height: 100vh;
+    }
+
+    .gallery-heading {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #008080;
+        font-size: 2.3rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+        text-align: center;
+        letter-spacing: 1px;
+        text-shadow: 0 1px 10px rgba(0, 128, 128, 0.07);
+    }
+
+    .pr-card {
+        background: linear-gradient(115deg, #fff 70%, #e0f7fa 100%);
+        border-radius: 1rem;
+        box-shadow: 0 2px 14px rgba(0, 128, 128, 0.15), 0 1.5px 5px rgba(0, 0, 0, 0.07);
+        transition: box-shadow 0.2s, transform 0.25s;
+        overflow: hidden;
+        padding: 12px;
+        margin-bottom: 32px;
+    }
+
+    .pr-card:hover {
+        box-shadow: 0 8px 30px rgba(0, 128, 128, 0.24), 0 8px 20px rgba(0, 0, 0, 0.14);
+        transform: translateY(-5px) scale(1.03);
+        background: linear-gradient(115deg, #e0f7fa 70%, #fff 100%);
+    }
+
+    .pr-image {
+        width: 100%;
+        border-radius: 0.7rem;
+        object-fit: cover;
+        margin-bottom: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .pr-caption {
+        font-size: 1.06rem;
+        color: #333;
+        font-weight: 550;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<script>
+    // Basic right-click protection
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // Disable common dev tools shortcuts
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'F12') {
+            e.preventDefault();
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+            e.preventDefault();
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+            e.preventDefault();
+            return false;
+        }
+        if (e.ctrlKey && e.key === 'U') {
+            e.preventDefault();
+            return false;
+        }
+    });
+</script>
+<script>
+    // Disable right-click specifically on all images
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('img').forEach(function (img) {
+            img.addEventListener('contextmenu', function (e) {
+                e.preventDefault();
+            });
+        });
+    });
+</script>
+<div class="container py-5">
+    <div class="gallery-heading">Press Releases Gallery</div>
+    <div class="row justify-content-center">
+        {% for image in images %}
+        <div class="col-lg-4 col-md-6 col-sm-12 d-flex">
+            <div class="pr-card w-100">
+                <img src="{{ url_for('static', filename=image) }}" class="pr-image" alt="Press Release" />
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,401 @@
+{% extends "base.html" %}
+{% block title %}Personality Development - Vidyaranya Memorial Trust{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+<!-- Personality Development Hero Section -->
+<section class="personality-hero py-5 text-center sr-reveal">
+    <div class="container">
+        <h1 class="text-teal fw-bold mb-3">Personality Development Program</h1>
+        <p class="lead">Transforming lives through holistic development, meditation, and yoga for complete well-being.
+        </p>
+    </div>
+</section>
+
+<!-- Program Overview -->
+<section id="program-overview" class="py-5 sr-reveal">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="fw-bold text-teal mb-4 text-center">Holistic Personality Development</h2>
+                <p class="text-center mb-4">Endeavor is the basis of personal development and it should be continuous.
+                    Camps like this help in the mental development of children as they take part and learn without any
+                    restraint.</p>
+
+                <div class="program-description">
+                    <p>The Human enrichment/ Integrated/ Personality development and character building could be
+                        effective non-formal methods of seeking a positive change in the value-temper of students and
+                        teachers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Monthly Classes -->
+<section id="monthly-classes" class="py-5 bg-light sr-reveal">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="{{ url_for('static', filename='images/personality/development-session.jpg') }}"
+                    alt="Personality Development Session" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold text-teal mb-3">Monthly Development Sessions</h2>
+                <p>We conduct classes on the first Sunday of every month. These sessions help students:</p>
+                <ul class="benefits-list">
+                    <li><i class="fas fa-brain text-teal me-2"></i> Increase memory power</li>
+                    <li><i class="fas fa-bullseye text-teal me-2"></i> Enhance concentration</li>
+                    <li><i class="fas fa-user-graduate text-teal me-2"></i> Develop personality</li>
+                    <li><i class="fas fa-trophy text-teal me-2"></i> Build positive outlook towards career</li>
+                </ul>
+                <p>We inspire students to have a positive outlook towards their career and success, and motivate them to
+                    achieve their targets by providing success tips and easy ways to achieve their desires in life.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Yoga & Meditation Section -->
+<section id="yoga-meditation" class="py-5 sr-reveal">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center fw-bold text-teal mb-4">Yoga & Meditation Program</h2>
+
+                <div class="meditation-description mb-5">
+                    <p>The Meditation techniques taught by our members are specially evolved by professionals and are
+                        simple, effective and effortless. The twin objectives of these sessions are to help stressed out
+                        individuals to relax and to help create a base for further spiritual progress.</p>
+                </div>
+
+                <!-- Yoga Schedule -->
+                <div class="yoga-schedule">
+                    <h3 class="fw-bold text-teal mb-3">Yoga Class Schedule</h3>
+                    <div class="schedule-table">
+                        <div class="schedule-header">
+                            <div class="schedule-day">Class Type</div>
+                            <div class="schedule-time">Morning Session</div>
+                            <div class="schedule-time">Evening Session</div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="schedule-day">Yoga For All (Monday – Saturday)</div>
+                            <div class="schedule-time">05:30 am to 06:30 am</div>
+                            <div class="schedule-time">04:30 pm to 05:30 pm</div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="schedule-day">Sunday</div>
+                            <div class="schedule-time">05:30 am to 07:00 am</div>
+                            <div class="schedule-time">-</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program Benefits -->
+                <div class="program-benefits mt-5">
+                    <h3 class="fw-bold text-teal mb-3">Program Includes</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="benefit-item">
+                                <i class="fas fa-running fa-2x text-teal mb-2"></i>
+                                <h5 class="fw-bold">Physical Exercises</h5>
+                                <p>Comprehensive exercises for every part of the body from head to toe</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="benefit-item">
+                                <i class="fas fa-wind fa-2x text-teal mb-2"></i>
+                                <h5 class="fw-bold">Pranayama & Meditation</h5>
+                                <p>Breathing techniques and meditation for better health and mental peace</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Program Outcomes -->
+<section id="program-outcomes" class="py-5 bg-light sr-reveal">
+    <div class="container">
+        <h2 class="text-center fw-bold text-teal mb-5">Program Outcomes</h2>
+
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="outcome-card">
+                    <i class="fas fa-heartbeat fa-3x text-teal mb-3"></i>
+                    <h4 class="fw-bold">Improved Health</h4>
+                    <p>Pranayama & Meditation techniques are imparted for betterment of health, enabling participants to
+                        live happily and become independent and healthy individuals.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="outcome-card">
+                    <i class="fas fa-hands-helping fa-3x text-teal mb-3"></i>
+                    <h4 class="fw-bold">Service Motivation</h4>
+                    <p>These sessions help people realize the importance of their lives and motivate them to engage in
+                        selfless service activities without expecting anything in return.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="py-5 sr-reveal">
+    <div class="container">
+        <h2 class="text-center fw-bold text-teal mb-5">Participant Experiences</h2>
+
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"The personality development sessions transformed my approach to
+                            life. I've gained incredible confidence and clarity in my career goals."</p>
+                        <div class="testimonial-author">
+                            <span class="fw-bold">- Program Participant</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card mt-4">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"The yoga and meditation classes have brought peace and discipline
+                            into my life. I feel more focused and energetic throughout the day."</p>
+                        <div class="testimonial-author">
+                            <span class="fw-bold">- Regular Attendee</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact & Registration -->
+<section id="contact-registration" class="py-5 bg-teal text-white sr-reveal">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h2 class="fw-bold mb-3">Join Our Personality Development Program</h2>
+                <p class="mb-0">Transform your life with our comprehensive personality development and yoga sessions.
+                    Start your journey towards better health and personal growth.</p>
+            </div>
+            <div class="col-md-4 text-center text-md-end">
+                <a href="mailto:vidyaranyamemorialtrust@yahoo.co.in" class="btn btn-light btn-lg">
+                    <i class="fas fa-envelope me-2"></i>Email Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Detailed Contact Section -->
+<section id="detailed-contact" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="fw-bold text-teal mb-4">Contact Information</h2>
+                <div class="contact-info">
+                    <p class="mb-3">
+                        <i class="fas fa-envelope text-teal me-2"></i>
+                        <strong>Email:</strong> vidyaranyamemorialtrust@yahoo.co.in
+                    </p>
+                    <p class="mb-3">
+                        <i class="fas fa-calendar-alt text-teal me-2"></i>
+                        <strong>Monthly Sessions:</strong> First Sunday of every month
+                    </p>
+                    <p class="mb-3">
+                        <i class="fas fa-clock text-teal me-2"></i>
+                        <strong>Daily Yoga:</strong> Morning and Evening sessions as per schedule
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Personality Development Page Specific Styles */
+    .personality-hero {
+        background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+        border-radius: 15px;
+        margin: 20px 0;
+    }
+
+    .benefits-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .benefits-list li {
+        padding: 8px 0;
+        font-size: 1.05rem;
+    }
+
+    .schedule-table {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .schedule-header {
+        background: #1976d2;
+        color: white;
+        display: flex;
+        padding: 15px 20px;
+        font-weight: 600;
+    }
+
+    .schedule-row {
+        display: flex;
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .schedule-row:last-child {
+        border-bottom: none;
+    }
+
+    .schedule-day {
+        flex: 2;
+        font-weight: 600;
+        color: #1976d2;
+    }
+
+    .schedule-time {
+        flex: 1;
+        text-align: center;
+    }
+
+    .schedule-header .schedule-day,
+    .schedule-header .schedule-time {
+        text-align: center;
+    }
+
+    .benefit-item {
+        text-align: center;
+        padding: 20px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        height: 100%;
+    }
+
+    .outcome-card {
+        text-align: center;
+        padding: 30px 20px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        height: 100%;
+    }
+
+    .testimonial-card {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-left: 4px solid #1976d2;
+    }
+
+    .testimonial-text {
+        font-style: italic;
+        font-size: 1.1rem;
+        color: #555;
+    }
+
+    #contact-registration {
+        border-radius: 15px;
+        margin: 40px 0;
+    }
+
+    .contact-info {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+
+        .schedule-header,
+        .schedule-row {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .schedule-day,
+        .schedule-time {
+            margin-bottom: 5px;
+        }
+
+        .schedule-header {
+            display: none;
+        }
+
+        .outcome-card {
+            padding: 20px 15px;
+        }
+    }
+</style>
+
+<script>
+    // Enable Bootstrap dropdowns to show on hover for nav-bar
+    document.querySelectorAll('.navbar .dropdown').forEach(function (dropdown) {
+        dropdown.addEventListener('mouseenter', function () {
+            const menu = this.querySelector('.dropdown-menu');
+            if (menu) {
+                menu.classList.add('show');
+            }
+        });
+        dropdown.addEventListener('mouseleave', function () {
+            const menu = this.querySelector('.dropdown-menu');
+            if (menu) {
+                menu.classList.remove('show');
+            }
+        });
+    });
+
+    // Disable right-click on images
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('img').forEach(function (img) {
+            img.addEventListener('contextmenu', function (e) {
+                e.preventDefault();
+            });
+        });
+    });
+</script>
+<script>
+    // Basic right-click protection
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // Disable common dev tools shortcuts
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'F12') {
+            e.preventDefault();
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+            e.preventDefault();
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+            e.preventDefault();
+            return false;
+        }
+        if (e.ctrlKey && e.key === 'U') {
+            e.preventDefault();
+            return false;
+        }
+    });
+</script>
+
+{% endblock %}

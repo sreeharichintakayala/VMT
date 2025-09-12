@@ -1,0 +1,430 @@
+{% extends "base.html" %}
+{% block title %}Education Initiatives - Vidyaranya Memorial Trust{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+<!-- Education Hero Section -->
+<section class="education-hero py-5 text-center sr-reveal">
+    <div class="container">
+        <h1 class="text-teal fw-bold mb-3">Education Initiatives</h1>
+        <p class="lead">Empowering students through quality education and supporting their academic journey from school
+            to professional careers.</p>
+    </div>
+</section>
+
+<!-- Velugu Rekhalu Program Overview -->
+<section id="program-overview" class="py-5 sr-reveal">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="fw-bold text-teal mb-4 text-center">VELUGU REKHALU - 2012</h2>
+                <p class="text-center mb-4">Vidyaranya Memorial Trust's second service activity pillar is "EDUCATION"
+                    initiated through the program "VELUGU REKHALU-2012", organized annually in January to spread
+                    awareness about the importance of education.</p>
+
+                <div class="program-highlights">
+                    <p>The main aim of Velugu Rekalu – 2012 is to provide free education by distributing:</p>
+                    <ul>
+                        <li>Notebooks and Textbooks</li>
+                        <li>College Fees and Tuition Fees</li>
+                        <li>Bus Passes for transportation</li>
+                        <li>Educational materials to poor and needy intelligent students</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Program Gallery -->
+<section id="program-gallery" class="py-5 bg-light sr-reveal">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='images/educational/educational2.png') }}"
+                        alt="1600 Students Writing Examination" class="img-fluid rounded shadow">
+                    <div class="gallery-caption">
+                        <p class="text-center mt-2 fw-semibold">1600 Students Writing the Examination</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="gallery-item">
+                    <img src="{{ url_for('static', filename='images/educational/educational3.png') }}"
+                        alt="Announcing Selected Students" class="img-fluid rounded shadow">
+                    <div class="gallery-caption">
+                        <p class="text-center mt-2 fw-semibold">Announcing the Selected Student Names</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Program Statistics -->
+<section id="program-stats" class="py-5 sr-reveal">
+    <div class="container">
+        <h2 class="text-center fw-bold text-teal mb-5">Velugu Rekalu – 2012 Program Details</h2>
+
+        <div class="row text-center">
+            <div class="col-md-3 mb-4">
+                <div class="stat-card">
+                    <h3 class="fw-bold text-teal">25</h3>
+                    <p>Participated Schools</p>
+                    <small>Zilla Parishad High Schools</small>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="stat-card">
+                    <h3 class="fw-bold text-teal">1,600</h3>
+                    <p>Students Registered</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="stat-card">
+                    <h3 class="fw-bold text-teal">25</h3>
+                    <p>Students Selected</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="stat-card">
+                    <h3 class="fw-bold text-teal">2012-2014</h3>
+                    <p>Academic Year</p>
+                    <small>June 2012 to Mar 2014</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Selected Students Section -->
+<section id="selected-students" class="py-5 bg-light sr-reveal">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="fw-bold text-teal mb-4">TOP 25 SELECTED STUDENTS</h2>
+                <img src="{{ url_for('static', filename='images/educational/educational4.png') }}"
+                    alt="Top 25 Selected Students" class="img-fluid rounded shadow mb-4">
+
+                <div class="certificate-distribution">
+                    <img src="{{ url_for('static', filename='images/educational/educational1.png') }}"
+                        alt="Distribution of Participation Certificates" class="img-fluid rounded shadow">
+                    <p class="text-center mt-2 fw-semibold">Distribution of Participation Certificates</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Success Stories -->
+<section id="success-stories" class="py-5 sr-reveal">
+    <div class="container">
+        <h2 class="text-center fw-bold text-teal mb-5">Success Stories</h2>
+
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <p class="mb-4">Vidyaranya Memorial Trust, as part of its education initiative, has benefited so many
+                    children and students from Zilla Parishad High Schools to Engineering Graduates, and many more
+                    continue to benefit.</p>
+
+                <div class="success-story mb-5">
+                    <h4 class="fw-bold text-teal">Achievement Spotlight</h4>
+                    <p>One of our brightest achievements is a student who dreamt of higher education and completed a
+                        Four-Year B.Tech (IT) program from Koneru Laxmaiah University, Vijayawada.</p>
+
+                    <p>Vidyaranya Memorial Trust contributed towards his education fund to pursue his academic
+                        interests. In his final year of B.Tech, he was selected for Tata Consultancy Services with a
+                        package of 4 Lakhs Per Annum and is presently working as a "Software Engineer" at Tata
+                        Consultancy Services in Chennai.</p>
+
+                    <div class="student-testimonial">
+                        <blockquote class="blockquote">
+                            <p>"Vidyaranya Memorial Trust helped me achieve my academic goals and supported me
+                                throughout my journey. I express my heartfelt gratitude and hope the organization
+                                continues to help many more students in the future."</p>
+                            <footer class="blockquote-footer">Karthik C, <cite title="Source Title">Software
+                                    Engineer at TCS</cite></footer>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- Additional Student Opinions -->
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="student-opinion">
+                            <div class="opinion-content">
+                                <p>"The support from Vidyaranya Memorial Trust changed my life. I couldn't have pursued
+                                    engineering without their help."</p>
+                                <span class="student-name">- Rajesh K</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="student-opinion">
+                            <div class="opinion-content">
+                                <p>"Free education and materials provided by the trust helped me focus on my studies
+                                    without financial worries."</p>
+                                <span class="student-name">- Kumar S</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="student-opinion">
+                            <div class="opinion-content">
+                                <p>"The bus pass facility made it possible for me to attend college regularly. Thank you
+                                    for your support!"</p>
+                                <span class="student-name">- Rohith M</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="{{ url_for('static', filename='docs/education-program.pdf') }}"
+                        class="btn bg-teal text-white" target="_blank">
+                        <i class="fas fa-file-pdf me-2"></i>Read more about Education Program
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Current Programs -->
+<section id="current-programs" class="py-5 bg-light sr-reveal">
+    <div class="container">
+        <h2 class="text-center fw-bold text-teal mb-5">Current Education Initiatives</h2>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="program-card">
+                    <i class="fas fa-book-open fa-3x text-teal mb-3"></i>
+                    <h4 class="fw-bold">School Support</h4>
+                    <p>Providing educational materials and fees for underprivileged students in Zilla Parishad High
+                        Schools</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="program-card">
+                    <i class="fas fa-graduation-cap fa-3x text-teal mb-3"></i>
+                    <h4 class="fw-bold">College Education</h4>
+                    <p>Supporting meritorious students through college education and professional courses</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="program-card">
+                    <i class="fas fa-bus fa-3x text-teal mb-3"></i>
+                    <h4 class="fw-bold">Transportation</h4>
+                    <p>Providing bus passes and transportation support for easy access to education</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section id="education-cta" class="py-5 bg-teal text-white text-center sr-reveal">
+    <div class="container">
+        <h2 class="fw-bold mb-3">Support Education Initiatives</h2>
+        <p class="mb-4">Help us continue our mission to provide quality education to underprivileged students. Your
+            support can change lives.</p>
+        <a href="#contact" class="btn btn-light btn-lg">Get Involved</a>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="text-teal fw-bold text-center mb-4">Contact for Education Programs</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" class="form-control" placeholder="Phone Number">
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select" required>
+                            <option value="">Select Interest</option>
+                            <option value="student-support">Student Support</option>
+                            <option value="volunteer">Volunteer Opportunity</option>
+                            <option value="donation">Make a Donation</option>
+                            <option value="partnership">School Partnership</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn bg-teal text-white w-100">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Education Page Specific Styles */
+    .education-hero {
+        background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+        border-radius: 15px;
+        margin: 20px 0;
+    }
+
+    .program-highlights {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin: 20px 0;
+    }
+
+    .program-highlights ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .program-highlights li {
+        padding: 8px 0;
+        font-size: 1.05rem;
+        position: relative;
+        padding-left: 30px;
+    }
+
+    .program-highlights li:before {
+        content: "✓";
+        color: #1976d2;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        top: 8px;
+    }
+
+    .stat-card {
+        background: white;
+        padding: 30px 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        height: 100%;
+    }
+
+    .stat-card h3 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .student-testimonial {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 15px;
+        border-left: 4px solid #1976d2;
+        margin: 20px 0;
+    }
+
+    .student-opinion {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        height: 100%;
+    }
+
+    .student-name {
+        color: #666;
+        font-style: italic;
+        font-weight: 500;
+    }
+
+    .program-card {
+        background: white;
+        padding: 30px 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        height: 100%;
+    }
+
+    #education-cta {
+        border-radius: 15px;
+        margin: 40px 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .stat-card {
+            padding: 20px 15px;
+        }
+
+        .stat-card h3 {
+            font-size: 2rem;
+        }
+
+        .program-highlights {
+            padding: 20px 15px;
+        }
+    }
+</style>
+
+<script>
+    // Enable Bootstrap dropdowns to show on hover for nav-bar
+    document.querySelectorAll('.navbar .dropdown').forEach(function (dropdown) {
+        dropdown.addEventListener('mouseenter', function () {
+            const menu = this.querySelector('.dropdown-menu');
+            if (menu) {
+                menu.classList.add('show');
+            }
+        });
+        dropdown.addEventListener('mouseleave', function () {
+            const menu = this.querySelector('.dropdown-menu');
+            if (menu) {
+                menu.classList.remove('show');
+            }
+        });
+    });
+
+    // Disable right-click on images
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('img').forEach(function (img) {
+            img.addEventListener('contextmenu', function (e) {
+                e.preventDefault();
+            });
+        });
+    });
+</script>
+<script>
+    // Basic right-click protection
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // Disable common dev tools shortcuts
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'F12') {
+            e.preventDefault();
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+            e.preventDefault();
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+            e.preventDefault();
+            return false;
+        }
+        if (e.ctrlKey && e.key === 'U') {
+            e.preventDefault();
+            return false;
+        }
+    });
+</script>
+
+{% endblock %}

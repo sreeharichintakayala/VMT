@@ -1,0 +1,338 @@
+{% extends "base.html" %}
+{% block title %}Women Welfare - Vidyaranya Memorial Trust{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+<!-- Women Welfare Hero Section -->
+<section class="women-welfare-hero py-5 text-center sr-reveal">
+    <div class="container">
+        <h1 class="text-teal fw-bold mb-3">Women Welfare Initiatives</h1>
+        <p class="lead">Empowering women through education, healthcare, and economic opportunities for a brighter
+            future.</p>
+    </div>
+</section>
+
+<!-- Program Overview -->
+<section id="program-overview" class="py-5 sr-reveal">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="fw-bold text-teal mb-4">Our Women Welfare Programs</h2>
+                <p class="mb-4">Vidyaranya Memorial Trust is committed to empowering women through comprehensive welfare
+                    programs that focus on education, health, skill development, and economic independence.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Image Gallery Section -->
+<section id="women-welfare-gallery" class="py-5 bg-light sr-reveal">
+    <div class="container">
+        <h2 class="text-center fw-bold text-teal mb-5">Our Women Welfare Initiatives</h2>
+
+        <div class="row g-4">
+            <!-- Image 1 -->
+            <div class="col-md-4">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="{{ url_for('static', filename='images/woman/woman1.png') }}"
+                            alt="Women Empowerment Program" class="img-fluid">
+                    </div>
+                    <div class="gallery-content">
+                        <h4 class="fw-bold text-teal">Skill Development</h4>
+                        <p>Vocational training programs to enhance employability and self-sufficiency</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="col-md-4">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="{{ url_for('static', filename='images/woman/woman2.png') }}"
+                            alt="Women Health Awareness" class="img-fluid">
+                    </div>
+                    <div class="gallery-content">
+                        <h4 class="fw-bold text-teal">Health Awareness</h4>
+                        <p>Health camps and awareness programs focusing on women's wellness</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="col-md-4">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="{{ url_for('static', filename='images/woman/woman3.png') }}"
+                            alt="Women Education Support" class="img-fluid">
+                    </div>
+                    <div class="gallery-content">
+                        <h4 class="fw-bold text-teal">Education Support</h4>
+                        <p>Educational scholarships and support for girls and women of all ages</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Program Details -->
+<section id="program-details" class="py-5 sr-reveal">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center fw-bold text-teal mb-5">Our Focus Areas</h2>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="focus-area">
+                            <i class="fas fa-heartbeat fa-2x text-teal mb-3"></i>
+                            <h4 class="fw-bold">Health & Wellness</h4>
+                            <p>Regular health check-ups, cancer awareness programs, and maternal healthcare services for
+                                women in rural areas.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="focus-area">
+                            <i class="fas fa-graduation-cap fa-2x text-teal mb-3"></i>
+                            <h4 class="fw-bold">Education</h4>
+                            <p>Scholarships, adult education programs, and career counseling for girls and women to
+                                pursue their dreams.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="focus-area">
+                            <i class="fas fa-hands-helping fa-2x text-teal mb-3"></i>
+                            <h4 class="fw-bold">Skill Development</h4>
+                            <p>Vocational training in tailoring, computer skills, handicrafts, and other
+                                income-generating activities.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="focus-area">
+                            <i class="fas fa-scale-balanced fa-2x text-teal mb-3"></i>
+                            <h4 class="fw-bold">Legal Awareness</h4>
+                            <p>Workshops on women's rights, legal protection, and support systems available for women in
+                                need.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Impact Statistics -->
+<section id="impact-stats" class="py-5 bg-light sr-reveal">
+    <div class="container">
+        <h2 class="text-center fw-bold text-teal mb-5">Our Impact</h2>
+        <div class="row text-center">
+            <div class="col-md-3 mb-4">
+                <div class="impact-stat">
+                    <h3 class="fw-bold text-teal">500+</h3>
+                    <p>Women Trained</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="impact-stat">
+                    <h3 class="fw-bold text-teal">1000+</h3>
+                    <p>Health Check-ups</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="impact-stat">
+                    <h3 class="fw-bold text-teal">200+</h3>
+                    <p>Scholarships Awarded</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="impact-stat">
+                    <h3 class="fw-bold text-teal">25+</h3>
+                    <p>Villages Covered</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section id="women-cta" class="py-5 bg-teal text-white text-center sr-reveal">
+    <div class="container">
+        <h2 class="fw-bold mb-3">Support Women Welfare Programs</h2>
+        <p class="mb-4">Join us in our mission to empower women and create a more equitable society. Your support can
+            transform lives.</p>
+        <a href="#contact" class="btn btn-light btn-lg">Get Involved</a>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="text-teal fw-bold text-center mb-4">Contact for Women Welfare Programs</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" class="form-control" placeholder="Phone Number">
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select" required>
+                            <option value="">Select Interest</option>
+                            <option value="volunteer">Volunteer Opportunity</option>
+                            <option value="donation">Make a Donation</option>
+                            <option value="participation">Program Participation</option>
+                            <option value="partnership">Partnership</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn bg-teal text-white w-100">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Women Welfare Page Specific Styles */
+    .women-welfare-hero {
+        background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+        border-radius: 15px;
+        margin: 20px 0;
+    }
+
+    .gallery-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+    }
+
+    .gallery-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .gallery-image {
+        height: 250px;
+        overflow: hidden;
+    }
+
+    .gallery-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-card:hover .gallery-image img {
+        transform: scale(1.05);
+    }
+
+    .gallery-content {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .focus-area {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        height: 100%;
+        transition: transform 0.3s ease;
+    }
+
+    .focus-area:hover {
+        transform: translateY(-3px);
+    }
+
+    .impact-stat {
+        background: white;
+        padding: 30px 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .impact-stat h3 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    #women-cta {
+        border-radius: 15px;
+        margin: 40px 0;
+        background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%) !important;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .gallery-image {
+            height: 200px;
+        }
+
+        .impact-stat {
+            padding: 20px 15px;
+        }
+
+        .impact-stat h3 {
+            font-size: 2rem;
+        }
+
+        .focus-area {
+            padding: 20px 15px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .gallery-image {
+            height: 180px;
+        }
+
+        .impact-stat h3 {
+            font-size: 1.8rem;
+        }
+    }
+</style>
+
+<script>
+    // Enable Bootstrap dropdowns to show on hover for nav-bar
+    document.querySelectorAll('.navbar .dropdown').forEach(function (dropdown) {
+        dropdown.addEventListener('mouseenter', function () {
+            const menu = this.querySelector('.dropdown-menu');
+            if (menu) {
+                menu.classList.add('show');
+            }
+        });
+        dropdown.addEventListener('mouseleave', function () {
+            const menu = this.querySelector('.dropdown-menu');
+            if (menu) {
+                menu.classList.remove('show');
+            }
+        });
+    });
+
+    // Disable right-click on images
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('img').forEach(function (img) {
+            img.addEventListener('contextmenu', function (e) {
+                e.preventDefault();
+            });
+        });
+    });
+</script>
+
+{% endblock %}

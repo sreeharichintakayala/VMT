@@ -1,0 +1,398 @@
+{% extends "base.html" %}
+{% block title %}Health Initiatives - Vidyaranya Memorial Trust{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+<!-- Health Hero Section -->
+<section class="health-hero py-5 text-center sr-reveal">
+    <div class="container">
+        <h1 class="text-teal fw-bold mb-3">Health & Wellness Initiatives</h1>
+        <p class="lead">Providing comprehensive free health services including Yoga, Medical Camps, and Workshops to
+            support people from all walks of life.</p>
+    </div>
+</section>
+
+<!-- Health Department Focus -->
+<section id="health-focus" class="py-5 sr-reveal">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto text-center">
+                <h2 class="fw-bold text-teal mb-4">Our Health Department Focus</h2>
+                <p class="mb-4">The Health Department focuses on three key areas to provide better health packages to
+                    poor and needy people through free services:</p>
+
+                <div class="row mt-5">
+                    <div class="col-md-4 mb-4">
+                        <div class="focus-card">
+                            <i class="fas fa-spa fa-3x text-teal mb-3"></i>
+                            <h4 class="fw-bold">Yoga</h4>
+                            <p>Daily meditation and yoga sessions for holistic well-being</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="focus-card">
+                            <i class="fas fa-hospital fa-3x text-teal mb-3"></i>
+                            <h4 class="fw-bold">Health Camps</h4>
+                            <p>Free medical camps in rural villages</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="focus-card">
+                            <i class="fas fa-users fa-3x text-teal mb-3"></i>
+                            <h4 class="fw-bold">Workshops & Seminars</h4>
+                            <p>Cancer awareness and prevention programs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Yoga Section -->
+<section id="yoga" class="py-5 bg-light sr-reveal">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="{{ url_for('static', filename='images/health/healthcamp3.png') }}" alt="Yoga Classes"
+                    class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold text-teal mb-3">YOGA</h2>
+                <p>The Meditation Techniques taught by our members are specially evolved by professionals and are
+                    simple, effective and effortless. The twin objectives of these sessions are to help stressed out
+                    individuals to relax and to help create a base for further spiritual progress.</p>
+
+                <h4 class="fw-bold text-teal mt-4">Daily Yoga Classes Schedule:</h4>
+                <div class="schedule-table">
+                    <div class="schedule-row">
+                        <div class="schedule-day">Yoga For All (Monday – Saturday)</div>
+                        <div class="schedule-time">Morning: 05:30 am to 06:30 am</div>
+                        <div class="schedule-time">Evening: 04:30 pm to 05:30 pm</div>
+                    </div>
+                    <div class="schedule-row">
+                        <div class="schedule-day">Sunday</div>
+                        <div class="schedule-time">Morning: 05:30 am to 07:00 am</div>
+                        <div class="schedule-time"></div>
+                    </div>
+                </div>
+
+                <p class="mt-3">The sessions conducted at our premises have helped participants overcome diseases like
+                    Sinusitis, Blood Pressure, frequent cold, coughs, cervical spondylitis, heart blockages, arthritis,
+                    etc.</p>
+
+                <a href="{{ url_for('static', filename='docs/yoga-program.pdf') }}" class="btn bg-teal text-white mt-3"
+                    target="_blank">
+                    <i class="fas fa-file-pdf me-2"></i>Read more about Yoga Program
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Health Camps Section -->
+<section id="health-camps" class="py-5 sr-reveal">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+                <img src="{{ url_for('static', filename='images/health/healthcamp1.png') }}" alt="Health Medical Camp"
+                    class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6 order-md-1">
+                <h2 class="fw-bold text-teal mb-3">HEALTH CAMPS AT RURAL VILLAGES</h2>
+                <p>Vidyaranya Memorial Trust has conducted many Health Medical Camps at various rural villages in
+                    collaboration with <strong>L.V. Prasad Eye Institute</strong> & <strong>Kamineni Hospital</strong>
+                    as part of our "Blindness from the Root Initiative" & General Health Awareness Programmes.</p>
+
+                <p>Our Health Camps provide:</p>
+                <ul class="health-services">
+                    <li><i class="fas fa-check-circle text-teal me-2"></i>Screening Tests</li>
+                    <li><i class="fas fa-check-circle text-teal me-2"></i>Distributing Medicines & Spectacles</li>
+                    <li><i class="fas fa-check-circle text-teal me-2"></i>Performing Surgeries free of cost</li>
+                    <li><i class="fas fa-check-circle text-teal me-2"></i>General health check-ups</li>
+                </ul>
+
+                <p>Vidyaranya Memorial Trust has already touched many lakhs of people in various schools, colleges,
+                    government organizations, and different communities within a short span of time.</p>
+
+                <a href="{{ url_for('static', filename='docs/health-camps.pdf') }}" class="btn bg-teal text-white mt-3"
+                    target="_blank">
+                    <i class="fas fa-file-pdf me-2"></i>Read more about Health Camps
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Workshops & Seminars Section -->
+<section id="workshops" class="py-5 bg-light sr-reveal">
+    <div class="container">
+        <h2 class="text-center fw-bold text-teal mb-5">WORKSHOPS & SEMINARS</h2>
+
+        <div class="row mb-4">
+            <div class="col-md-4 mb-3">
+                <img src="{{ url_for('static', filename='images/health/healthcamp4.png') }}"
+                    alt="Breast Cancer 5KM Walk" class="img-fluid rounded shadow">
+                <p class="text-center mt-2 fw-semibold">Breast Cancer 5KM Walk</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="{{ url_for('static', filename='images/health/healthcamp5.png') }}"
+                    alt="Cervical Cancer Workshop" class="img-fluid rounded shadow">
+                <p class="text-center mt-2 fw-semibold">Workshop on Prevention of Cervical Cancer</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="{{ url_for('static', filename='images/health/healthcamp6.png') }}"
+                    alt="Breast Cancer Health Talk" class="img-fluid rounded shadow">
+                <p class="text-center mt-2 fw-semibold">Prevention of Breast Cancer Health Talk</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h4 class="fw-bold text-teal">Cancer from the Root Initiative</h4>
+                <p>The main aim of Vidyaranya Memorial Trust Health Department focuses on the third aspect - Workshops &
+                    Seminars to remove "Cancer from the Root Initiative" Awareness Programmes at rural villages &
+                    engineering institutions.</p>
+
+                <p>We provide basic and detailed information about Cancer Prevention & Cure through:</p>
+                <ul class="workshop-services">
+                    <li><i class="fas fa-bullhorn text-teal me-2"></i>Distributing pamphlets, brochures, and booklets
+                    </li>
+                    <li><i class="fas fa-chalkboard-teacher text-teal me-2"></i>Educational sessions for poor and needy
+                        people</li>
+                    <li><i class="fas fa-heartbeat text-teal me-2"></i>Explaining how to guard against these dreadful
+                        diseases</li>
+                    <li><i class="fas fa-hand-holding-heart text-teal me-2"></i>All services provided completely free of
+                        cost</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Impact Statistics -->
+<section id="impact" class="py-5 sr-reveal">
+    <div class="container">
+        <h2 class="text-center fw-bold text-teal mb-5">Our Impact</h2>
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="impact-stat">
+                    <h3 class="fw-bold text-teal">50,000+</h3>
+                    <p>People served through health camps</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="impact-stat">
+                    <h3 class="fw-bold text-teal">100+</h3>
+                    <p>Villages covered</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="impact-stat">
+                    <h3 class="fw-bold text-teal">5000+</h3>
+                    <p>Free surgeries performed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section id="health-cta" class="py-5 bg-teal text-white text-center sr-reveal">
+    <div class="container">
+        <h2 class="fw-bold mb-3">Join Our Health Initiatives</h2>
+        <p class="mb-4">Be part of our mission to create a healthier community. Participate in our programs, volunteer
+            your time, or support our cause.</p>
+        <a href="#contact" class="btn btn-light btn-lg">Get Involved</a>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="text-teal fw-bold text-center mb-4">Contact for Health Programs</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" class="form-control" placeholder="Phone Number">
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select" required>
+                            <option value="">Select Program Interest</option>
+                            <option value="yoga">Yoga Classes</option>
+                            <option value="health-camp">Health Camps</option>
+                            <option value="workshop">Workshops & Seminars</option>
+                            <option value="volunteer">Volunteer Opportunity</option>
+                            <option value="donation">Make a Donation</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn bg-teal text-white w-100">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Health Page Specific Styles */
+    .health-hero {
+        background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+        border-radius: 15px;
+        margin: 20px 0;
+    }
+
+    .focus-card {
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        height: 100%;
+    }
+
+    .schedule-table {
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .schedule-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .schedule-row:last-child {
+        border-bottom: none;
+    }
+
+    .schedule-day {
+        font-weight: 600;
+        color: #1976d2;
+        flex: 2;
+    }
+
+    .schedule-time {
+        flex: 1;
+        text-align: right;
+        color: #666;
+    }
+
+    .health-services,
+    .workshop-services {
+        list-style: none;
+        padding: 0;
+    }
+
+    .health-services li,
+    .workshop-services li {
+        padding: 8px 0;
+        font-size: 1.05rem;
+    }
+
+    .impact-stat {
+        background: white;
+        padding: 30px 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .impact-stat h3 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    #health-cta {
+        border-radius: 15px;
+        margin: 40px 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .schedule-row {
+            flex-direction: column;
+        }
+
+        .schedule-time {
+            text-align: left;
+            margin-top: 5px;
+        }
+
+        .impact-stat {
+            padding: 20px 15px;
+        }
+
+        .impact-stat h3 {
+            font-size: 2rem;
+        }
+    }
+</style>
+<script>
+    // Basic right-click protection
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // Disable common dev tools shortcuts
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'F12') {
+            e.preventDefault();
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+            e.preventDefault();
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+            e.preventDefault();
+            return false;
+        }
+        if (e.ctrlKey && e.key === 'U') {
+            e.preventDefault();
+            return false;
+        }
+    });
+</script>
+<script>
+    // Enable Bootstrap dropdowns to show on hover for nav-bar
+    document.querySelectorAll('.navbar .dropdown').forEach(function (dropdown) {
+        dropdown.addEventListener('mouseenter', function () {
+            const menu = this.querySelector('.dropdown-menu');
+            if (menu) {
+                menu.classList.add('show');
+            }
+        });
+        dropdown.addEventListener('mouseleave', function () {
+            const menu = this.querySelector('.dropdown-menu');
+            if (menu) {
+                menu.classList.remove('show');
+            }
+        });
+    });
+
+    // Disable right-click on images
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('img').forEach(function (img) {
+            img.addEventListener('contextmenu', function (e) {
+                e.preventDefault();
+            });
+        });
+    });
+</script>
+
+{% endblock %}
