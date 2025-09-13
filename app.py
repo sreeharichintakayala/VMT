@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, url_for
-
+from flask import request,jsonify
 app = Flask(__name__)
 
 counter_file = "counter.txt"
@@ -47,6 +47,21 @@ def woman():
     return render_template('woman.html')
 
 
+@app.route('/feedback', methods = ['POST'])
+def receive_feedback():
+    data = request.get_json()
+
+    if not data:
+        return jsonify({"error" : "No JSON data provided"}),400
+    name = data.get('name')
+    email = data.get('email')
+    message = data.get('message')
+    if not name or not email or not message:
+        return jsonify({"error" : "Missing required fields"}),400
+    
+    print('Recieved Feedback : ', data)
+
+    return jsonify({"message" : "Feedback received successfully"}), 200
 
 @app.route('/personalitydevelopment')
 def personalitydevelopment():
