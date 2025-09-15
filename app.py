@@ -1,8 +1,10 @@
 import os
+from flask_cors import CORS
 from flask import Flask, render_template, url_for
 from flask import request,jsonify
+from flask_mail import Mail, Message
 app = Flask(__name__)
-
+CORS(app)
 counter_file = "counter.txt"
 
 def get_and_increment_counter():
@@ -17,11 +19,38 @@ def get_and_increment_counter():
         f.truncate()
     return count
 
+##Configure Flask-mail
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USERNAME'] = 'cdevi3163@gmail.com'
+app.config['MAIL_PASSWORD'] =  'dobf dkoj qtzt fxer'
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
 
+mail = Mail(app)
+@app.route('/feedback', methods = ['POST'])
+def receive_feedback():
+    data = request.get_json()
 
+    if not data:
+        return jsonify({"error" : "No JSON data provided"}),400
+    name = data.get('name')
+    email = data.get('email')
+    message = data.get('message')
+    if not name or not email or not message:
+        return jsonify({"error" : "Missing required fields"}),400
+    
+    email_body = f"Name: {name}\nEmail: {email}\nMessage: {message}"
 
+    msg = Message(
+        subject =  'New Feedback Form Submission',
+        sender = app.config['MAIL_USERNAME'],
+        recipients= ['sreeharichintakayala@gmail.com'],
+        body=email_body
+    )
+    mail.send(msg)
 
-
+    return jsonify({'message' : 'Feedback received and emailed successfully!'}),200
 
 
 
@@ -47,21 +76,6 @@ def woman():
     return render_template('woman.html')
 
 
-@app.route('/feedback', methods = ['POST'])
-def receive_feedback():
-    data = request.get_json()
-
-    if not data:
-        return jsonify({"error" : "No JSON data provided"}),400
-    name = data.get('name')
-    email = data.get('email')
-    message = data.get('message')
-    if not name or not email or not message:
-        return jsonify({"error" : "Missing required fields"}),400
-    
-    print('Recieved Feedback : ', data)
-
-    return jsonify({"message" : "Feedback received successfully"}), 200
 
 @app.route('/personalitydevelopment')
 def personalitydevelopment():
